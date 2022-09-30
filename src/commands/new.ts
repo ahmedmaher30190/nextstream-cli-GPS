@@ -35,7 +35,7 @@ export default class New extends Command {
     execSync('cp .env.local.example .env.local', { cwd: frontendFolder });
 
     this.log('Creating Laravel project...');
-    execSync(`laravel new backend`, { cwd: rootFolder });
+    execSync(`git clone https://github.com/laravel/laravel.git backend`, { cwd: rootFolder });
 
     this.log('Installing Nextstream...');
     execSync(`composer require ozzie/nextstream`, { cwd: backendFolder });
